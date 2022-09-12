@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       alert("Ques 3 : Write a code in JavaScript to Check all Students passed ");
+  // let string = prompt("Enter any string with extra spaces");
+  let size = prompt("Enter the size of array");
+  let res = [];
+  let sum = 0;
+  while (size-- > 0) {
+    var num = Number(prompt("Enter number"));
+    checkNum(num);
+    sum = sum + num;
+  }
+
+  function checkNum(num) {
+    while (!/^[0-9]+$/.test(num)) {
+      alert("You did not enter a number.");
+      answer = prompt("Enter a number: ");
+    }
+    res.push(num);
+    alert("Number added to array");
+  }
+  alert("Given Array : " + res);
+  sum = sum / size;
+  let marksCriteria = prompt("Enter the passing criteria");
+  if (sum >= marksCriteria) {
+    alert("Students passed");
+  } else {
+    alert("Students failed");
+  }
+    </script>
+</body>
+</html>
